@@ -45,6 +45,11 @@ namespace Sample.Base.Core
             return str.Trim();
         }
 
+        /// <summary>
+        /// Compare string ignore case
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static bool EqualsIgnoreCase(this string src, string target) => string.Equals(src, target, StringComparison.OrdinalIgnoreCase);
     }
 }
