@@ -44,5 +44,7 @@ namespace Sample.Base.Core
                 return String.Empty;
             return str.Trim();
         }
+
+        public static bool EqualsIgnoreCase(this string src, string target) => string.Equals(src, target, StringComparison.OrdinalIgnoreCase);
     }
 }
