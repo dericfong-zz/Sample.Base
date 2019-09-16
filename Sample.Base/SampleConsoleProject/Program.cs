@@ -26,5 +26,13 @@ namespace SampleConsoleProject
             Console.WriteLine("End Test");
         }
     }
-    
+
+    public class TestEnum
+    {
+        public enum Enum1
+        {
+            test1 = 1,
+            test2 = 2
+        }
+    }
 }
