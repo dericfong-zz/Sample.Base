@@ -42,5 +42,14 @@ namespace Sample.Base.Core.Extensions
             }
             return list.ElementAt(index);
         }
+
+        public static T ElementAtOrDefault<T>(this IEnumerable<T> list, int index, Func<T> @default)
+        {
+            if (index < 0 || index >= list.Count())
+            {
+                return @default();
+            }
+            return list.ElementAt(index);
+        }
     }
 }

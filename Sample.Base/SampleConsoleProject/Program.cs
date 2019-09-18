@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using Sample.Base.Core;
 using Sample.Base.Core.Extensions;
-
+using System.Linq;
 
 namespace SampleConsoleProject
 {
@@ -28,6 +29,15 @@ namespace SampleConsoleProject
             var enuma = TestEnum.Enum1.test1;
 
             Console.WriteLine($"-{enuma.ToDescription()}-");
+
+            IEnumerable<int?> enumInts = new int?[] { 10, 20, 30, 40, 50, 40 };
+
+            var ev = enumInts.ElementAtOrDefault(6, 100);
+            Console.WriteLine("ev (is 100): " + ev);
+
+            var ev1 = enumInts.IndexesWhere(a => a == 40);
+
+            Console.WriteLine("IndexesWhere (is 3,5): " + string.Join(", ", ev1));
 
             Console.WriteLine("End Test");
         }
