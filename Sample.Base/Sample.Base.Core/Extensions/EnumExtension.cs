@@ -37,6 +37,12 @@ namespace Sample.Base.Core.Extensions
             return dict[description];
         }
 
+        public static string ToEnumString<T>(this string number) where T : IConvertible
+        {
+            var enumT = (T)Enum.ToObject(typeof(T), number);
+            return enumT.ToString();
+        }
+
         private static string GetEnumDescription<T>(T value)
         {
             FieldInfo fi = value.GetType().GetField(value.ToString());
