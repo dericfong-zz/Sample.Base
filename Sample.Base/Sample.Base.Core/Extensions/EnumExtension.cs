@@ -13,6 +13,12 @@ namespace Sample.Base.Core.Extensions
             return GetEnumDescription(e);
         }
 
+        public static string ToDescription<T>(this string number) where T : IConvertible
+        {
+            var enumT = (T)Enum.ToObject(typeof(T), number);
+            return GetEnumDescription(enumT);
+        }
+
         public static T ToEnum<T>(this string description, bool ignoreCase = false) where T : IConvertible
         {
             StringComparer stringComparer = (ignoreCase == true ? StringComparer.OrdinalIgnoreCase : StringComparer.Ordinal);
