@@ -43,6 +43,11 @@ namespace Sample.Base.Core.Extensions
             return dict[description];
         }
 
+        public static string ToStringNum(this Enum e)
+        {
+            return Convert.ToInt32(e).ToString();
+        }
+
         public static string ToEnumString<T>(this string number) where T : IConvertible
         {
             var enumT = (T)Enum.ToObject(typeof(T), number);
