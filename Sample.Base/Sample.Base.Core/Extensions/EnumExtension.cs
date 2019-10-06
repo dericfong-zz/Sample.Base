@@ -15,7 +15,7 @@ namespace Sample.Base.Core.Extensions
 
         public static string ToDescription<T>(this string number) where T : IConvertible
         {
-            var enumT = (T)Enum.ToObject(typeof(T), number);
+            var enumT = (T)Enum.ToObject(typeof(T), Convert.ToInt32(number));
             return GetEnumDescription(enumT);
         }
 
