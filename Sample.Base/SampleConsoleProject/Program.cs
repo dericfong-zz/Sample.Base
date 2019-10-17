@@ -30,6 +30,8 @@ namespace SampleConsoleProject
 
             Console.WriteLine($"-{enuma.ToDescription()}-");
 
+            Console.WriteLine($"ToStringNum-{enuma.ToStringNum()}-");
+
             IEnumerable<int?> enumInts = new int?[] { 10, 20, 30, 40, 50, 40 };
 
             var ev = enumInts.ElementAtOrDefault(6, 100);
