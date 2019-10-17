@@ -41,6 +41,9 @@ namespace SampleConsoleProject
 
             Console.WriteLine("IndexesWhere (is 3,5): " + string.Join(", ", ev1));
 
+            var cl = new TestEnum();
+            Console.WriteLine($"-{ ExtensionMethod.GetPropertyName( ()=> cl.ThisIsProperty)}-");
+
             Console.WriteLine("End Test");
         }
     }
@@ -54,5 +57,7 @@ namespace SampleConsoleProject
             [Description("haha2")]
             test2 = 2
         }
+
+        public string ThisIsProperty { get; set; }
     }
 }
