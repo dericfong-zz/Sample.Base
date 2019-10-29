@@ -52,6 +52,12 @@ namespace Sample.Base.Core
         /// <returns></returns>
         public static bool EqualsIgnoreCase(this string src, string target) => string.Equals(src, target, StringComparison.OrdinalIgnoreCase);
 
+        /// <summary>
+        /// Get First after split the string
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="delimiter"></param>
+        /// <returns></returns>
         public static string FirstFromSplit(this string source, string delimiter)
         {
             var i = source.IndexOf(delimiter);
