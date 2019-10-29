@@ -51,5 +51,12 @@ namespace Sample.Base.Core
         /// <param name="str"></param>
         /// <returns></returns>
         public static bool EqualsIgnoreCase(this string src, string target) => string.Equals(src, target, StringComparison.OrdinalIgnoreCase);
+
+        public static string FirstFromSplit(this string source, string delimiter)
+        {
+            var i = source.IndexOf(delimiter);
+
+            return i == -1 ? source : source.Substring(0, i);
+        }
     }
 }
