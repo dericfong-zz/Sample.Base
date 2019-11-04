@@ -44,6 +44,9 @@ namespace SampleConsoleProject
             var cl = new TestEnum();
             Console.WriteLine($"-{ ExtensionMethod.GetPropertyName( ()=> cl.ThisIsProperty)}-");
 
+            string firstFromSplitText = "abc,edf,hij";
+            Console.WriteLine("FirstFromSplit (abc,edf,hij): " + firstFromSplitText.FirstFromSplit(","));
+
             Console.WriteLine("End Test");
         }
     }
