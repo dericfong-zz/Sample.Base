@@ -47,6 +47,10 @@ namespace SampleConsoleProject
             string firstFromSplitText = "abc,edf,hij";
             Console.WriteLine("FirstFromSplit (abc,edf,hij): " + firstFromSplitText.FirstFromSplit(","));
 
+            DateTime dtNow = DateTime.Now;
+
+            Console.WriteLine("datetime12: " + DateTimeExtensions.ToFormat12h(dtNow));
+
             Console.WriteLine("End Test");
         }
     }
