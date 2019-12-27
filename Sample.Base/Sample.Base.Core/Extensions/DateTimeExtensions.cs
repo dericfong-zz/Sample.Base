@@ -10,5 +10,10 @@ namespace Sample.Base.Core.Extensions
         {
             return dt == null ? "" : Convert.ToDateTime(dt).ToString("yyyy/MM/dd hh:mm:ss tt");
         }
+
+        public static string ToFormat24h(this DateTime? dt)
+        {
+            return dt == null ? "" : Convert.ToDateTime(dt).ToString("yyyy/MM/dd HH:mm:ss");
+        }
     }
 }
