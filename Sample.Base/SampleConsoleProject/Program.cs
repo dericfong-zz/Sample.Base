@@ -51,6 +51,8 @@ namespace SampleConsoleProject
 
             Console.WriteLine("datetime12: " + DateTimeExtensions.ToFormat12h(dtNow));
 
+            Console.WriteLine("datetime24: " + DateTimeExtensions.ToFormat24h(dtNow));
+
             Console.WriteLine("End Test");
         }
     }
